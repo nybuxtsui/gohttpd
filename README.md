@@ -13,3 +13,5 @@ mkdir htdocs
 echo "hello" > htdocs/index.html
 
 ./gohttpd
+
+./gohttpd -h # show help
