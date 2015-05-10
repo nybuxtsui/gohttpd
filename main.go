@@ -17,6 +17,7 @@ func main() {
 	}
 
 	addr := flag.String("addr", ":8080", "http server listen address, format: [ip]:port")
+	flag.Parse()
 	http.Handle("/", http.FileServer(http.Dir(HTDOCS)))
 	log.Fatal(http.ListenAndServe(*addr, nil))
 }
